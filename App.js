@@ -7,35 +7,15 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Home from './src/screens/Home';
+import apiResponse from './flows/2_lesson_introduction_contentful.json';
+import * as Styled from './App.style';
 
 const App = () => {
-
   return (
-    <>
-     <SafeAreaView>
-        <View>
-          <Text>
-            Hello World!
-          </Text>
-        </View>
-      </SafeAreaView>
-    </>
+    <Styled.MainWrapper>
+      <Home response={apiResponse} />
+    </Styled.MainWrapper>
   );
 };
 
